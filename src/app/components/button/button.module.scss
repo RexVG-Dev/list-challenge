@@ -1,0 +1,27 @@
+.button {
+  @apply flex justify-center items-center rounded-md py-3 px-1 m-2 text-white cursor-pointer;
+
+  &__fluid {
+    @apply w-full;
+  }
+
+  &__small {
+    @apply w-10 h-10 py-1 px-1 rounded-full;
+  }
+
+  &__medium {
+    @apply w-32
+  }
+
+  &__large {
+    @apply w-56
+  }
+
+  &--delete {
+    @apply bg-red-600;
+  }
+
+  &--nav {
+    @apply bg-sky-900;
+  }
+}

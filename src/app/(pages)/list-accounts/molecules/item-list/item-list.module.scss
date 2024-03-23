@@ -1,0 +1,23 @@
+.item-list {
+  @apply flex items-center rounded-xl w-full bg-gray-200 my-5 py-4 px-2;
+
+  &__image {
+    @apply rounded-md mr-3;
+  }
+
+  &__content {
+    @apply w-full h-full;
+  }
+
+  &__title {
+    @apply text-lg font-bold text-stone-700;
+  }
+
+  &__subtitle {
+    @apply text-sm font-light text-stone-600;
+  }
+
+  &__actions {
+    @apply flex justify-end;
+  }
+}

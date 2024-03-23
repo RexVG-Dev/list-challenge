@@ -1,0 +1,7 @@
+.loading {
+  @apply flex flex-col justify-center items-center my-auto w-screen;
+
+  &__title {
+    @apply text-4xl font-bold my-7;
+  }
+}

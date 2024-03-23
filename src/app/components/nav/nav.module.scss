@@ -1,0 +1,31 @@
+.header {
+  @apply text-gray-700 font-normal;
+
+  &__container {
+    @apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center;
+  }
+
+  &__logo {
+    @apply flex font-medium items-center text-gray-900 mr-3 mb-4 md:mb-0;
+  }
+
+  &__title-logo {
+    @apply ml-3 text-2xl;
+  }
+
+  &__nav {
+    @apply md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center;
+  }
+
+  &__ul {
+    @apply flex gap-4;
+  }
+
+  &__item-nav {
+   @apply font-semibold;
+  }
+
+  &__item-nav:hover {
+    @apply font-bold text-slate-900;
+  }
+}
