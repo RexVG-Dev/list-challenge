@@ -5,25 +5,26 @@ import Link from "next/link";
 import { useBanksStore } from "@/store";
 import Button from "./components/button/button";
 import { BUTTON_ACTION, BUTTON_SIZE } from "./components/button";
-import { BankType } from "@/types";
+import { getBanksList } from "@/api/banks";
 
 export default function Home() {
 
-  const {banksList , updateBanksList} = useBanksStore((state) => state);
-
-  const getBanksList = async () => {
-    const response = await fetch('https://dev.obtenmas.com/catom/api/challenge/banks');
-    const data: BankType[] = await response.json();
-
-    updateBanksList(data);
-  }
+  const {banksList, updateBanksList} = useBanksStore((state) => state);
 
   useEffect(() => {
     if(banksList.length === 0) {
-      getBanksList();
+      const fetchData = async () => {
+        try {
+          const data = await getBanksList();
+          updateBanksList(data);
+        } catch (error) {
+          console.error('Error fetching banks list:', error);
+        }
+      };
+      fetchData();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [banksList])
+    
+  }, [])
   
   
 
