@@ -7,7 +7,7 @@ import styles from './search-bar.module.scss';
 import { useDebounceFilter } from './hooks';
 
 
-export const SerachBar = () => {
+export const SearchBar = () => {
   const [valueInput, setValueInput] = useState<string>('');
   const {banksList, updateFilterList, updateSearchTerm} = useBanksStore((state) => state);
   const { searchTerm, filteredData} = useDebounceFilter({value: valueInput, data: banksList});
