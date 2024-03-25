@@ -1,7 +1,7 @@
 "use client"
 
 import { useBanksStore } from '@/store';
-import {SerachBar} from '@/app/components/search-bar';
+import { SearchBar } from '@/app/components/search-bar';
 
 import { useSortByBankName } from './hooks';
 
@@ -29,7 +29,7 @@ const ListAccounts = () => {
   
   return (
     <section className={styles['list-accounts']}>
-      <SerachBar />
+      <SearchBar />
       {listToMap.map(bank => (
         <ItemList
           key={bank.bankName}
